@@ -4,24 +4,22 @@ import {
  
   Routes,
   
-  Link,
+ 
 } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./components/HomePage";
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
-import { useState } from "react";
+
 import 'antd/dist/antd.css'; 
 
 // import 'semantic-ui-css/semantic.min.css';
 // import 'semantic-ui-css/semantic.js';
 
 function App() {
-  const [pop, setpop] = useState(false);
-  const handleOpenModal = () => {
-    setpop(true);
-  };
+  
+ 
 
   return (
     <BrowserRouter>
@@ -29,9 +27,9 @@ function App() {
       
 
         <Routes>
-          <Route path="signupform" element={<SignUpForm />} />
+          <Route path="/signupform" element={<SignUpForm />} />
           <Route path="/" element={<LoginForm />} />
-          <Route path="/homepage" element={<HomePage  handleclick={handleOpenModal}/>} />
+          <Route path="/homepage" element={<HomePage/>} />
        
         </Routes>
       </div>
